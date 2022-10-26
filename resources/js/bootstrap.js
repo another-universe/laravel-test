@@ -1,0 +1,1 @@
+window.Bootstrap = require('bootstrap');

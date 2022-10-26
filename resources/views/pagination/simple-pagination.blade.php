@@ -1,0 +1,29 @@
+@if ($paginator->hasPages())
+<div>
+
+<ul class="pagination">
+{{-- Previous Page Link --}}
+@if ($paginator->onFirstPage())
+<li class="page-item disabled">
+<span class="page-link" role="link" aria-disabled="true">&lsaquo; @lang('pagination.previous')</span>
+</li>
+@else
+<li class="page-item">
+<a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">&lsaquo; @lang('pagination.previous')</a>
+</li>
+@endif
+
+{{-- Next Page Link --}}
+@if ($paginator->hasMorePages())
+<li class="page-item">
+<a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next">@lang('pagination.next') &rsaquo;</a>
+</li>
+@else
+<li class="page-item disabled">
+<span class="page-link" role="link" aria-disabled="true">@lang('pagination.next') &rsaquo;</span>
+</li>
+@endif
+</ul>
+
+</div>
+@endif
