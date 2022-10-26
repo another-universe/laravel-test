@@ -1,0 +1,14 @@
+{
+    "presets": [
+        [
+            "@babel\/preset-env",
+            {
+                "targets": [
+                    "> 5%",
+                    "not dead"
+                ],
+                "loose": true
+            }
+        ]
+    ]
+}
